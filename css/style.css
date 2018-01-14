@@ -1,0 +1,398 @@
+@charset "UTF-8";
+/*
+GERAL
+*/
+.button {
+  border: 0;
+  color: #FFF;
+  background-color: #000000;
+  padding: 10px 30px;
+  border-radius: 3px;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: .9em;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #333;
+
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: "Roboto Slab", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section[id] {
+  padding-top: 58px;
+}
+
+/*
+NAVEGAÇÃO
+*/
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #333;
+}
+
+nav > a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 28px;
+  font-family: Pacifico, serif;
+  margin-bottom: 8px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+nav ul li {
+  text-align: center;
+  width: 100%;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px 0;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+}
+
+/*
+CABEÇALHO
+*/
+header {
+  background-image: url(../img/desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  itext-align: center;
+  padding: 50px 0;
+}
+
+header p {
+  margin-bottom: 2em;
+}
+
+header img {
+    border-radius: 50%;
+    filter:grayscale(80%)
+}
+
+header h1 {
+    margin-top: 1em;
+}
+
+
+/*
+SOBRE
+*/
+.sobre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #000000;
+  color: #fff;
+  padding-bottom: 58px;
+}
+
+.sobre p {
+  margin-bottom: 2em;
+  max-width: 1000px;
+}
+
+.sobre .button {
+  background-color: #fff;
+  color: #333;
+}
+
+/*
+SERVICOS
+*/
+.servicos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.servicos .servico {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.servicos .servico h3 {
+  margin-top: 10px;
+}
+
+.servicos .servico img {
+  width: 100%;
+  max-width: 80px;
+}
+
+/*
+PORTFÓLIO
+*/
+.portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio h2 {
+  margin-bottom: 20px;
+}
+
+.portfolio img {
+  width: 100%;
+}
+
+/*
+CONTATO
+*/
+.contato {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.contato a {
+  display: block;
+  color: inherit;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icone-contato:last-child {
+  margin-top: 10px;
+}
+
+/*
+FOOTER
+*/
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #000000;
+  color: #f1f1f1;
+  margin-top: 58px;
+}
+
+/*
+MEDIA QUERIES
+*/
+@media screen and (min-width: 768px) {
+  /*
+  NAVEGAÇÃO
+  */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 50%;
+  }
+
+  /*
+  CABEÇALHO
+  */
+  header {
+    height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  /*
+  SOBRE
+  */
+  .sobre {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  /*
+  SERVICOS
+  */
+  .servicos {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .servicos h2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .servicos .servico {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 150px;
+            flex: 1 1 150px;
+    padding: 0 10px;
+  }
+
+  /*
+  PORTFÓLIO
+  */
+  .portfolio {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+
+  .portfolio h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .portfolio img {
+    width: 33.333333333333%;
+  }
+
+  /*
+  CONTATO
+  */
+  .contato {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .contato h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .icone-contato:last-child {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,298 @@
+/*
+GERAL
+*/
+.button {
+  border: 0;
+  color: #fff;
+  background-color: #13a9ba;
+  padding: 10px 30px;
+  border-radius: 3px;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: .9em;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: "Roboto Slab", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section[id] {
+  padding-top: 58px;
+}
+
+/*
+NAVEGAÇÃO
+*/
+nav {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #333;
+}
+
+nav > a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 28px;
+  font-family: Pacifico, serif;
+  margin-bottom: 8px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul li {
+  text-align: center;
+  width: 100%;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px 0;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+}
+
+/*
+CABEÇALHO
+*/
+header {
+  background-image: url("https://s22.postimg.org/n4kckyho1/fundo_escuro.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FFF;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0;
+}
+
+header p {
+  margin-bottom: 2em;
+}
+
+/*
+SOBRE
+*/
+.sobre {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  background-color: #13a9ba;
+  color: #fff;
+  padding-bottom: 58px;
+}
+
+.sobre p {
+  margin-bottom: 2em;
+  max-width: 1000px;
+}
+
+.sobre .button {
+  background-color: #fff;
+  color: #333;
+}
+
+/*
+SERVICOS
+*/
+.servicos {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.servicos .servico {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.servicos .servico h3 {
+  margin-top: 10px;
+}
+
+.servicos .servico img {
+  width: 100%;
+  max-width: 80px;
+}
+
+/*
+PORTFÓLIO
+*/
+.portfolio {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.portfolio h2 {
+  margin-bottom: 20px;
+}
+
+.portfolio img {
+  width: 100%;
+}
+
+/*
+CONTATO
+*/
+.contato {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contato a {
+  display: block;
+  color: inherit;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icone-contato:last-child {
+  margin-top: 10px;
+}
+
+/*
+FOOTER
+*/
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #13a9ba;
+  color: #f1f1f1;
+  margin-top: 58px;
+}
+
+/*
+MEDIA QUERIES
+*/
+@media screen and (min-width: 768px) {
+  /*
+  NAVEGAÇÃO
+  */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  nav ul {
+    flex-direction: row;
+    width: 50%;
+  }
+  
+  /*
+  CABEÇALHO
+  */
+  header {
+    height: 100vh;
+    justify-content: center;
+  }
+  
+  /*
+  SOBRE
+  */  
+  .sobre {
+    justify-content: center;
+  }
+  
+  /*
+  SERVICOS
+  */
+  .servicos {
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .servicos h2 {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .servicos .servico {
+    flex: 1 1 150px;
+    padding: 0 10px;
+  }
+  
+  /*
+  PORTFÓLIO
+  */
+  .portfolio {
+    flex-flow: row wrap;
+  }
+  
+  .portfolio h2 {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .portfolio img {
+    width: 33.333333333333%;
+  }
+  
+  /*
+  CONTATO
+  */
+  .contato {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .contato h2 {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .icone-contato:last-child {
+    margin-top: 0;
+  }
+}
