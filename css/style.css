@@ -278,6 +278,11 @@ footer {
   margin-top: 58px;
 }
 
+.social-icons a {font-size: 1.5em; color: rgba(255,255,255,0.7); margin-right: 3%;}
+.social-icons a:last-child {margin-right: 0;}
+.social-icons a:hover {color: rgb(255,255,255);}
+
+
 /*
 MEDIA QUERIES
 */
