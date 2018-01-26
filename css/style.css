@@ -27,7 +27,7 @@ h1, h2, h3 {
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 section[id] {
@@ -43,18 +43,18 @@ nav {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #333;
 }
 
 nav > a {
   text-decoration: none;
   color: #fff;
-  font-weight: 700;
+  /* font-weight: 700; */
   font-size: 28px;
   font-family: inherit, serif;
   margin-bottom: 8px;
@@ -69,11 +69,11 @@ nav ul {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -102,13 +102,13 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  box-orient: vertical;
-  box-direction: normal;
-     flex-flow: column;
-          flex-flow: column;
-  box-align: center;
-      flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   itext-align: center;
   padding: 50px 0;
 }
@@ -118,12 +118,12 @@ header p {
 }
 
 header img {
-    border-radius: 50%;
-   /* filter:grayscale(30%); */
+  border-radius: 50%;
+  /* filter:grayscale(30%); */
 }
 
 header h1 {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 
@@ -136,11 +136,11 @@ SOBRE
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   background-color: #000000;
   color: #fff;
@@ -166,11 +166,11 @@ SERVICOS
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .servicos .servico {
@@ -179,11 +179,11 @@ SERVICOS
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   margin-top: 30px;
 }
@@ -206,11 +206,11 @@ PORTFÓLIO
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .portfolio h2 {
@@ -230,13 +230,13 @@ CONTATO
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
-    
+
 }
 
 .contato a {
@@ -250,8 +250,8 @@ form {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
   width: 80%;
   margin-bottom: 30px;
 }
@@ -297,18 +297,18 @@ MEDIA QUERIES
     width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.8);
   }
 
   nav ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     width: 50%;
   }
 
@@ -318,8 +318,8 @@ MEDIA QUERIES
   header {
     height: 100vh;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   /*
@@ -327,8 +327,8 @@ MEDIA QUERIES
   */
   .sobre {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   /*
@@ -336,14 +336,14 @@ MEDIA QUERIES
   */
   .servicos {
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     max-width: 1000px;
     margin: 0 auto;
   }
@@ -355,8 +355,8 @@ MEDIA QUERIES
 
   .servicos .servico {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 150px;
-            flex: 1 1 150px;
+    -ms-flex: 1 1 150px;
+    flex: 1 1 150px;
     padding: 0 10px;
   }
 
@@ -366,8 +366,8 @@ MEDIA QUERIES
   .portfolio {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
   }
 
   .portfolio h2 {
@@ -385,10 +385,10 @@ MEDIA QUERIES
   .contato {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     max-width: 500px;
     margin: 0 auto;
   }
