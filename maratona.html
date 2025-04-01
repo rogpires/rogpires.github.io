@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARATONA GADX 2025</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .btn {
+            background-color: #000080;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #000066;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: #000080;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .station-link {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .station-link:hover {
+            text-decoration: underline;
+        }
+
+        .total-row {
+            font-weight: bold;
+            background-color: #e6e6e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Contatos - Rádio Amador</h1>
+        
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="station">Estação:</label>
+                <input type="text" id="station" required>
+            </div>
+            <div class="form-group">
+                <label for="qsos">QSOs:</label>
+                <input type="number" id="qsos" required>
+            </div>
+            <div class="form-group">
+                <label for="dxcc">DXCC:</label>
+                <input type="number" id="dxcc" required>
+            </div>
+            <div class="form-group">
+                <label for="zones">Zonas CQ:</label>
+                <input type="number" id="zones" required>
+            </div>
+            <button type="submit" class="btn">Adicionar Contato</button>
+        </form>
+
+        <table id="contactsTable">
+            <thead>
+                <tr>
+                    <th>Classificação</th>
+                    <th>Estação</th>
+                    <th>QSOs</th>
+                    <th>DXCC</th>
+                    <th>Zonas CQ</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dados serão inseridos aqui via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Array para armazenar todos os contatos
+        let contacts = [];
+
+        // Função para salvar os contatos no localStorage
+        function saveContacts() {
+            localStorage.setItem('radioContacts', JSON.stringify(contacts));
+        }
+
+        // Função para carregar os contatos do localStorage
+        function loadContacts() {
+            const savedContacts = localStorage.getItem('radioContacts');
+            if (savedContacts) {
+                contacts = JSON.parse(savedContacts);
+                updateTable();
+            }
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const station = document.getElementById('station').value;
+            const qsos = parseInt(document.getElementById('qsos').value);
+            const dxcc = parseInt(document.getElementById('dxcc').value);
+            const zones = parseInt(document.getElementById('zones').value);
+            
+            // Calcula os pontos somando DXCC + Zonas CQ
+            const points = dxcc + zones;
+            
+            // Adiciona o novo contato ao array
+            contacts.push({
+                station: station,
+                qsos: qsos,
+                dxcc: dxcc,
+                zones: zones,
+                points: points
+            });
+            
+            // Atualiza a tabela e salva os dados
+            updateTable();
+            saveContacts();
+            
+            // Limpa o formulário
+            this.reset();
+        });
+
+        function calculateTotals() {
+            return contacts.reduce((totals, contact) => {
+                totals.qsos += contact.qsos;
+                totals.dxcc += contact.dxcc;
+                totals.zones += contact.zones;
+                totals.points += contact.points;
+                return totals;
+            }, { qsos: 0, dxcc: 0, zones: 0, points: 0 });
+        }
+
+        function updateTable() {
+            // Ordena os contatos por pontuação (maior para menor)
+            contacts.sort((a, b) => b.points - a.points);
+            
+            const tbody = document.querySelector('#contactsTable tbody');
+            tbody.innerHTML = ''; // Limpa a tabela
+            
+            // Adiciona os contatos ordenados
+            contacts.forEach((contact, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td><a href="#" class="station-link">${contact.station}</a></td>
+                    <td>${contact.qsos}</td>
+                    <td>${contact.dxcc}</td>
+                    <td>${contact.zones}</td>
+                    <td>${contact.points}</td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            // Adiciona a linha de total
+            const totals = calculateTotals();
+            const totalRow = document.createElement('tr');
+            totalRow.className = 'total-row';
+            totalRow.innerHTML = `
+                <td>Total</td>
+                <td>${contacts.length} estações</td>
+                <td>${totals.qsos}</td>
+                <td>${totals.dxcc}</td>
+                <td>${totals.zones}</td>
+                <td>${totals.points}</td>
+            `;
+            tbody.appendChild(totalRow);
+        }
+
+        // Carrega os contatos salvos ao iniciar a página
+        loadContacts();
+
+        // Se não houver contatos salvos, adiciona dados iniciais de exemplo
+        if (contacts.length === 0) {
+            const initialData = [
+                { station: 'PY2TIM', qsos: 300, dxcc: 170, zones: 40, points: 210 },
+
+            ];
+            contacts = [...initialData];
+            updateTable();
+            saveContacts();
+        }
+    </script>
+</body>
+</html>
