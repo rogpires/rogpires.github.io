@@ -1,136 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>DEVELOPER</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
-
-<!-- coloque isso dentro de `head` -->
-<link rel="apple-touch-icon" href="./single-page-icon.png">
-  
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Feedback</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 0.7rem 1.5rem;
+      background: #007aff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
-
 <body>
-  <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <title>Curso HTML e CSS</title>
-    <meta name="description" content="Desenvolvedor web front end, com 3 anos de experiência, especialista em HTML e CSS, disponível para contratação, atualmente vivendo na bela Gotham.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- adicione aqui o normalize.css -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:400,700|Pacifico' rel='stylesheet' type='text/css'>
-    <!-- adicione aqui o arquivo css com seus estilos -->
-  </head>
-  <body>
-    <nav>
-      <a href="">ROGERIO PIRES</a>
-      <ul>
-        <li><a href="#sobre">ABOUT</a></li>
-        <li><a href="#servicos">SKILLS</a></li>
-        <li><a href="#portfolio">PROJECTS</a></li>
-        <li><a href="#contato">CONTACT</a></li>
-        <li><a href="https://resume.creddle.io/resume/46rvvo4xf90" target="_blank">RESUME</a></li>
-      </ul>
-    </nav>
-
-    <header>
-      <img src="./img/rogerio.jpg"/>
-      <h1>I am Rogério Pires</h1>
-      <p>Developer Front End.</p>
-      <a href="#sobre" class="button">SEE MORE</a>
-    </header>
-
-    <section id="sobre" class="sobre">
-      <h2>ABOUT</h2>
-      <p>I am a web developer front end, specialist in HTML, CSS and Javascript, studying VUE.JS and React, available for hiring, currently living in Araraquara/SP/Brazil.</p>
-      <a href="#contato" class="button">CONTACT</a>
-    </section>
-
-    <section id="servicos" class="servicos">
-      <h2>SKILLS</h2>
-      <article class="servico">
-       <i class="fa fa-html5 fa-5x" aria-hidden="true"></i>
-        <h3>HTML 5</h3>
-       <!-- <p>Integra facilmente seu site a qualquer gerenciador de conteúdo.</p> -->
-      </article>
-      <article class="servico">
-        <i class="fa fa-css3 fa-5x" aria-hidden="true"></i>
-        <h3>CSS 3</h3>
-       <!--  <p>Não deixe seus clientes na mão. Tenha seu site 24hrs no ar.</p> -->
-      </article>
-      <article class="servico">
-        <img src="./img/js.png" />
-        <h3>Javascript</h3>    
-       <!--  <p>Código legível, desenvolvido com as melhores práticas.</p> -->
-      </article>
-      <article class="servico">
-        <i class="fa fa-github fa-5x" aria-hidden="true"></i>
-        <h3>GIT / GITHUB</h3>
-       <!--  <p>É melhor fazer seus sites com amor hoje em dia!</p> -->
-      </article>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-      <h2>PROJECTS</h2>
-      <img src="./img/4dev.png" alt="Montanhas no horizonte">
-      <img src="./img/3br.png" alt="Montanhas e rio">
-      <img src="./img/poker.png" alt="Árvores e montanha nevada">
-      <img src="./img/reallize.png" alt="Pico de montanha">
-      <img src="./img/santacruz.png" alt="Cidade em vale de montanha">
-      <img src="./img/araucaria.png" alt="Estrada ao pé da montanha">
-    </section>
-
-    <section id="contato" class="contato">
-      <h2>CONTACT</h2>
-      
-    <!--  <p>Estou ansioso para saber o que você tem para falar</p>
-      <form action="/contato-sucesso" method="post">
-        <input type="text" name="nome" placeholder="Nome">
-        <input type="email" name="email" placeholder="Email">
-        <select name="assunto">
-          <option selected>Selecione um assunto</option>
-          <option value="orcamento">Orçamento</option>
-          <option value="suporte">Suporte</option>
-          <option value="outro">Outro</option>
-        </select>
-        <textarea name="mensagem" placeholder="Mensagem"></textarea>
-        <button type="submit" class="button">ENVIAR</button>
-      </form>
-      
-      -->
-    
-      <div class="icone-contato">
-       <br>
-        <i class="fa fa-phone fa-3x" aria-hidden="true"></i>
-        <a href="tel:16981647131">(016)98164 7131</a>
-      </div>
-
-      <div class="icone-contato">
-       <br>
-        <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
-        <a href="mailto:rogeriocpires@hotmail.com">rogeriocpires@hotmail.com</a>
-      </div>
-    </section>
-
-    <footer>
-     <div class="social-icons">
-            <a href="https://www.facebook.com/rogerio.pires.56" target="_blanck"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/rogpires" target="_blanck"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-google" target="_blanck"></i></a>
-            <a href="https://www.instagram.com/rogercodes/" target="_blanck"><i class="fa fa-instagram"></i></a>
-            <a href="mailto:rogeriocpires@hotmail.com"><i class="fa fa-envelope"></i></a>
-            <a href="https://github.com/rogpires" target="_blanck"><i class="fa fa-github"> </i></a>
-          </div>
-      <p>Dev by Rogério Pires @2018</p>
-      
-    </footer>
-  </body>
-</html>
-
-
+  <h1>Feedback</h1>
+  <p>Envie seu feedback abaixo:</p>
+  <form action="https://formsubmit.co/rogeiocpires@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu email" required>
+    <textarea name="message" rows="6" placeholder="Escreva seu feedback aqui..." required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
 </body>
 </html>
